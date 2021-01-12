@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+
+  ubuntu_16.04:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-ubuntu_16.04
+    volumes:
+      - .:/root/wkhtmltopdf_binary_gem
+
+  ubuntu_20.04:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-ubuntu_20.04
+    volumes:
+      - .:/root/wkhtmltopdf_binary_gem
+
+  debian_10:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-debian_10
+    volumes:
+      - .:/root/wkhtmltopdf_binary_gem
+
+  deepin:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-deepin
+    volumes:
+      - .:/root/wkhtmltopdf_binary_gem
